@@ -205,6 +205,10 @@ html, body {
     overflow-y: scroll;
 }
 
+#modal__faq .accordion {
+    font-family: "Helvetica Neue Cyr";
+}
+
 #modal__faq .accordion__title {
     color: #585858;
     font-size: 18px;
@@ -213,6 +217,7 @@ html, body {
     background: url(../img/accordion__closed.png) no-repeat center right;
     cursor: pointer;
     padding-right: 25px;
+    font-family: "Helvetica Neue Cyr";
 }
 
 #modal__faq .accordion__title-active {
@@ -221,6 +226,7 @@ html, body {
     font-size: 18px;
     font-weight: 400;
     line-height: 45px;
+    font-family: "Helvetica Neue Cyr";
 }
 
 #modal__faq .accordion span + p {
@@ -232,6 +238,7 @@ html, body {
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
+    font-family: "Helvetica Neue Cyr";
 }
 
 #modal__faq .accordion__description-active {
