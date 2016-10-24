@@ -699,8 +699,8 @@ html, body {
 .main__layout .main__shares .shares__container-a {
     display: table;
     margin: auto;
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: 80px;
     left: 0;
     bottom: 0;
     right: 0;

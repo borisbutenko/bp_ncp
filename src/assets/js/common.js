@@ -72,6 +72,7 @@ $(function() {
                     minWidth: 880,
                     height: 482
                 });
+                $('.ui-dialog').css('margin', '0 auto');
                 break;
             case 'registration-check':
                 hideModals();
@@ -82,6 +83,7 @@ $(function() {
                     minWidth: 880,
                     height: 482
                 });
+                $('.ui-dialog').css('margin', '0 auto');
                 break;
             case 'registration-check-second':
                 hideModals();
@@ -92,6 +94,7 @@ $(function() {
                     minWidth: 880,
                     height: 482
                 });
+                $('.ui-dialog').css('margin', '0 auto');
                 break;
             case 'registration-check-third':
                 hideModals();
@@ -102,6 +105,7 @@ $(function() {
                     minWidth: 880,
                     height: 482
                 });
+                $('.ui-dialog').css('margin', '0 auto');
                 break;
             case 'registration-check-forth':
                 hideModals();
@@ -112,6 +116,7 @@ $(function() {
                     minWidth: 880,
                     height: 482
                 });
+                $('.ui-dialog').css('margin', '0 auto');
                 break;
             case 'registration-check-fifth':
                 hideModals();
@@ -122,6 +127,7 @@ $(function() {
                     minWidth: 880,
                     height: 482
                 });
+                $('.ui-dialog').css('margin', '0 auto');
                 break;
             case 'faq':
                 hideModals();
@@ -145,12 +151,15 @@ $(function() {
         }
     });
 
+    if ( $(window).height() < 800 ) $('.wrapper__main, .main__menu').height(800);
+
     function getWrapperHeight() {
         var windowHeight = $(window).height(),
             headerHeight = $('.header').height(),
             footerHeight = $('.footer').height();
 
         if ( $(window).height() < height) return false;
+        if ( $(window).height() < 800 ) $('.wrapper__main, .main__menu').height(800);
 
         $('.wrapper__main, .main__menu').height(windowHeight - headerHeight);
     }
