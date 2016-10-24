@@ -1,0 +1,180 @@
+div#modal__login
+  div.modal__login
+    div.modal__layout
+      h1.h1.modal__title Вход
+    div.modal__layout
+      p.modal__description Пожалуйста, введите e-mail и пароль для входа в личный кабинет
+    div.modal__layout
+      input.input__default.input__modal(type="text" placeholder="E-mail")
+    div.modal__layout
+      input.input__default.input__modal(type="password" placeholder="Пароль")
+    div.modal__layout
+      a.button__default.button__silver.button__modal(href="cabinet.html")
+        span.button__silver-text Войти
+    div.modal__layout
+      a.modal__link(href="#" data-target='registration')
+        span.button__silver-text Зарегистрироваться
+div#modal__check
+  div.modal__check
+    div.modal__layout
+      h1.h1.modal__title.modal__title-check Регистрация чека
+    div.modal__layout
+      p.modal__description.modal__description-check Введите номер чека
+    div.modal__layout
+      input.input__default.input__modal(type="text" placeholder="Номер чека")
+    div.modal__layout
+      a.button__default.button__silver.button__modal(data-target='registration-check-second')
+        span.button__silver-text Продолжить
+    div.modal__layout
+      a.modal__link.modal__link-check(href="#" data-target='#')
+        span.button__silver-text Где находится номер чека?
+    div.modal__layout
+      div.modal__check-image
+div#modal__check-second
+  div.modal__login
+    div.modal__layout
+      h1.h1.modal__title.modal__title-check-second Регистрация чека
+    div.modal__layout
+      p.modal__description.modal__description-check-second Пожалуйста, введите номер Вашего телефона и e-mail — мы проверим, участвовали ли Вы ранее в наших Акциях.
+    div.modal__layout
+      input.input__default.input__modal(type="text" placeholder="E-mail")
+    div.modal__layout
+      input.input__default.input__modal(type="text" placeholder="Телефон")
+    div.modal__layout
+      a.button__default.button__silver.button__modal(data-target='registration-check-third')
+        span.button__silver-text Продолжить
+div#modal__check-third
+  div.modal__login
+    div.modal__layout
+      h1.h1.modal__title.modal__title-check-second Регистрация чека
+    div.modal__layout
+      p.modal__description.modal__description-check-second Введите пароль, отправленный Вам в sms
+    div.modal__layout
+      input.input__default.input__modal(type="password" placeholder="Пароль")
+    div.modal__layout
+      a.button__default.button__silver.button__modal(data-target='registration-check-forth')
+        span.button__silver-text Войти
+    div.modal__layout
+      a.modal__link(href="#" data-target='#')
+        span.button__silver-text Отправить пароль повторно
+div#modal__check-forth
+  div.modal__login
+    div.modal__layout
+      h1.h1.modal__title.modal__title-check-forth Регистрация чека
+    div.modal__layout
+      p.modal__description.modal__description-check-second.modal__description-check-forth Пожалуйста, заполните анкету для загрузки чека
+    div.modal__layout
+      div.block__left
+        div.block__layout
+          input.input__default(type="text" placeholder="Фамилия")
+          input.input__default(type="text" placeholder="Имя")
+          input.input__default(type="text" placeholder="Отчество")
+        div.block__layout
+          div.block__layout-sex
+            span.label__default.label__radio Пол:
+            input.input__radio(type="radio" name="sex" checked)
+            label.label__radio-active
+            span.label__default.label__radio Ж
+            input.input__radio(type="radio" name="sex")
+            label.label__radio-active
+            span.label__default.label__radio М
+        div.block__layout
+          div.block__layout-checkbox
+            div.modal__layout
+              input.input__checkbox(id="agree" type="checkbox" checked)
+              label.label__checkbox-active.label__checkbox-agree(for="agree")
+              span.label__default.label__checkbox Я согласна на получение рассылки и обработку #[a(href="#") персональных данных]
+            div.modal__layout
+              input.input__checkbox(id="agree-second" type="checkbox")
+              label.label__checkbox-active(for="agree-second")
+              span.label__default.label__checkbox Я согласна с #[a(href="#") правилами акции]
+      div.block__right
+        div.block__layout
+          div.block__layout-date
+            p.label__default.label__date Дата рождения:
+            input.input__default(type="text" placeholder="День").input__default-day
+            select.select__default.select__disabled(type="text")
+              option Месяц
+              option Январь
+              option Февраль
+              option Март
+              option Апрель
+              option Май
+              option Июнь
+              option Июль
+              option Август
+              option Сентябрь
+              option Октябрь
+              option Ноябрь
+              option Декабрь
+            input.input__default(type="text" placeholder="Год").input__default-year
+        div.block__layout.block__layout-city
+          input.input__default.input__modal(type="text" placeholder="Город")
+        div.block__layout
+          div.block__layout.block__layout-btn
+            a.button__default.button__silver.button__modal(data-target='registration-check-fifth')
+              span.button__silver-text Сохранить
+div#modal__check-fifth
+  div.modal__login
+    div.modal__check-fifth-content
+      div.modal__layout
+        p.modal__title-fifth Спасибо!
+        p.modal__title-fifth-first Чек успешно зарегистрирован!
+      div.modal__layout
+        p.modal__description.modal__description-check-fifth В случае победы организаторы свяжутся с Вами по указанным контактным данным.
+    div.modal__layout
+      p.modal__title-fifth-last Пройдите тест и получите образец крема бесплатно!
+    div.modal__layout
+      a.button__default.button__silver.button__modal(data-target='#')
+        span.button__silver-text Пройти тест
+div#modal__faq
+  div.modal__login
+    div.modal__check-fifth-content
+      div.modal__layout
+        p.modal__title-fifth Часто задаваемые вопросы
+        p.modal__title-fifth-first Задайте свой вопрос
+      div.modal__layout
+        textarea.input__default.input__textarea(type="text" placeholder="Введите текст")
+      div.modal__layout
+        input.input__default(type="text" placeholder="Имя")
+        input.input__default(type="text" placeholder="E-mail")
+      div.modal__layout
+        a.button__default.button__silver.button__modal(data-target='#')
+          span.button__silver-text Отправить
+      div#accordion.accordion
+        div.modal__layout
+          span.accordion__title Как отписаться от смс рассылки?
+          p.accordion__description Для того чтобы стать участником Акции, в период с 1 октября по 30 ноября 2015 года Вам необходимо оплатить картой MasterCard или Maestro одну или более покупок на сумму от 300 рублей каждая и зарегистрировать чек (слип)
+        div.modal__layout
+          span.accordion__title Как отписаться от смс рассылки?
+          p.accordion__description Для того чтобы стать участником Акции, в период с 1 октября по 30 ноября 2015 года Вам необходимо оплатить картой MasterCard или Maestro одну или более покупок на сумму от 300 рублей каждая и зарегистрировать чек (слип)
+        div.modal__layout
+          span.accordion__title Как отписаться от смс рассылки?
+          p.accordion__description Для того чтобы стать участником Акции, в период с 1 октября по 30 ноября 2015 года Вам необходимо оплатить картой MasterCard или Maestro одну или более покупок на сумму от 300 рублей каждая и зарегистрировать чек (слип)
+        div.modal__layout
+          span.accordion__title Как отписаться от смс рассылки?
+          p.accordion__description Для того чтобы стать участником Акции, в период с 1 октября по 30 ноября 2015 года Вам необходимо оплатить картой MasterCard или Maestro одну или более покупок на сумму от 300 рублей каждая и зарегистрировать чек (слип)
+        div.modal__layout
+          span.accordion__title Как отписаться от смс рассылки?
+          p.accordion__description Для того чтобы стать участником Акции, в период с 1 октября по 30 ноября 2015 года Вам необходимо оплатить картой MasterCard или Maestro одну или более покупок на сумму от 300 рублей каждая и зарегистрировать чек (слип)
+        div.modal__layout
+          span.accordion__title Как отписаться от смс рассылки?
+          p.accordion__description Для того чтобы стать участником Акции, в период с 1 октября по 30 ноября 2015 года Вам необходимо оплатить картой MasterCard или Maestro одну или более покупок на сумму от 300 рублей каждая и зарегистрировать чек (слип)
+        div.modal__layout
+          span.accordion__title Как отписаться от смс рассылки?
+          p.accordion__description Для того чтобы стать участником Акции, в период с 1 октября по 30 ноября 2015 года Вам необходимо оплатить картой MasterCard или Maestro одну или более покупок на сумму от 300 рублей каждая и зарегистрировать чек (слип)
+        div.modal__layout
+          span.accordion__title Как отписаться от смс рассылки?
+          p.accordion__description Для того чтобы стать участником Акции, в период с 1 октября по 30 ноября 2015 года Вам необходимо оплатить картой MasterCard или Maestro одну или более покупок на сумму от 300 рублей каждая и зарегистрировать чек (слип)
+        div.modal__layout
+          span.accordion__title Как отписаться от смс рассылки?
+          p.accordion__description Для того чтобы стать участником Акции, в период с 1 октября по 30 ноября 2015 года Вам необходимо оплатить картой MasterCard или Maestro одну или более покупок на сумму от 300 рублей каждая и зарегистрировать чек (слип)
+        div.modal__layout
+          span.accordion__title Как отписаться от смс рассылки?
+          p.accordion__description Для того чтобы стать участником Акции, в период с 1 октября по 30 ноября 2015 года Вам необходимо оплатить картой MasterCard или Maestro одну или более покупок на сумму от 300 рублей каждая и зарегистрировать чек (слип)
+        div.modal__layout
+          span.accordion__title Как отписаться от смс рассылки?
+          p.accordion__description Для того чтобы стать участником Акции, в период с 1 октября по 30 ноября 2015 года Вам необходимо оплатить картой MasterCard или Maestro одну или более покупок на сумму от 300 рублей каждая и зарегистрировать чек (слип)
+        div.modal__layout
+          span.accordion__title Как отписаться от смс рассылки?
+          p.accordion__description Для того чтобы стать участником Акции, в период с 1 октября по 30 ноября 2015 года Вам необходимо оплатить картой MasterCard или Maestro одну или более покупок на сумму от 300 рублей каждая и зарегистрировать чек (слип)

@@ -1,0 +1,50 @@
+extends _base
+block base
+  .wrapper(style="background: #392148 url(../img/background.png) no-repeat center center;")
+    include _header
+    .wrapper__main
+      div.main__layout
+        aside.aside__left.main__menu
+          div.menu__left
+            div.menu__container
+              nav.menu__list
+                li.menu__item
+                  div.menu__circle-default.menu__circle-active
+                  a.menu__link.link__default(href="Index.html")
+                    span.menu__text Зарегистрировать чек
+                li.menu__item
+                  div.menu__circle-default
+                  a.menu__link.link__default(href="Shares.html")
+                    span.menu__text Правила и призы
+                li.menu__item
+                  div.menu__circle-default
+                  a.menu__link.link__default(href="Winners.html")
+                    span.menu__text Победители
+        aside.aside__right.main__shares
+          div.shares__container-a
+            div.shares__container-text
+              img.shares__image-title(src="../img/potential.png" alt="Раскройте ваш потенциал")
+              div.shares__container-item
+                nav.shares__list
+                  li.shares__item
+                    div.shares__text
+                      span 1
+                      p Покупайте
+                      p продукцию "Черный жемчуг"
+                  li.shares__item
+                    div.shares__text
+                      span 2
+                      p Регистрируйте
+                      p чеки на сайте
+                  li.shares__item
+                    div.shares__text
+                      span 3
+                      p Учавствуйте
+                      p в еженедельном
+                      p и ежемесячном
+                      p розыгрыше призов
+              div.shares__container-button
+                a.button__gold.button__default(data-target='registration-check')
+                  span.button__gold-text Зарегистрировать чек
+    include _footer
+    include _modals

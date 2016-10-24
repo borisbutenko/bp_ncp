@@ -1,0 +1,44 @@
+.header {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #fff;
+    font-family: "Helvetica Neue Cyr";
+    padding: 0 30px;
+    position: relative;
+    z-index: 10;
+
+    &__second {
+        border-top: 1px solid #e3e4e6;
+    }
+
+    &__logo {
+       padding-top: 20px;
+    }
+
+    &__auth {
+        float: right;
+        padding-top: 20px;
+    }
+
+    .auth__button {
+        background: #392148 url(../img/lk.png) no-repeat right center;
+        display: inline-block;
+        padding-right: 40px;
+        height: 25px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+
+        &-second {
+            background: url(../img/lk__2.png) no-repeat right center;
+        }
+
+        .auth__text {
+            line-height: 2.5rem;
+
+            &-second {
+                color: #5e2a8f;
+            }
+        }
+    }
+}

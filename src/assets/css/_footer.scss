@@ -1,0 +1,120 @@
+.footer,
+.wrapper:after {
+    height: 69px;
+}
+
+.footer {
+    opacity: 0.7;
+    background-color: #43255e;
+    padding: 0 30px;
+
+    &__second {
+        background: #fff;
+    }
+
+    .social {
+        position: absolute;
+        margin-top: 20px;
+        z-index: 10;
+
+        &__item {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        &__faq {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 1.5px solid #fff;
+            background: #392148 url(../img/faq.png) no-repeat center center;
+            margin-right: 12px;
+            position: relative;
+            top: 1.5px;
+
+            &:hover {
+                background: #392148 url(../img/faq__hover.png) no-repeat center center;
+            }
+        }
+
+        &__ok {
+            background: #392148 url(../img/ok.png) no-repeat center center;
+
+            &:hover {
+                background: #392148 url(../img/ok__hover.png) no-repeat center center;
+            }
+        }
+
+        &__vk {
+            background: #392148 url(../img/vk.png) no-repeat center center;
+
+            &:hover {
+                background: #392148 url(../img/vk__hover.png) no-repeat center center;
+            }
+        }
+    }
+
+    &__img-title {
+        background: url(../img/footer__title.png) no-repeat top center;
+        height: 20px;
+        position: relative;
+        top: 14px;
+
+        &-second {
+            background: url(../img/footer__title-second.png) no-repeat top center;
+            top: 24px;
+        }
+    }
+}
+
+.footer__after {
+    width: 100%;
+    height: 109px;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    color: #585858;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 1.4rem;
+    font-weight: 300;
+
+    & p {
+        height: 14px;
+    }
+
+    &-container {
+        width: 900px;
+        display: inline-flex;
+    }
+
+    &-block {
+        float: left;
+        min-width: 300px;
+    }
+
+    &-text {
+        text-align: left;
+        display: table;
+    }
+
+    &-link {
+        text-align: left;
+        color: #585858;
+        text-decoration: underline;
+        float: left;
+        margin-top: 17px;
+        margin-right: 34px;
+        cursor: pointer;
+
+        & * {
+            display: inline-block;
+            text-decoration: underline;
+        }
+    }
+}

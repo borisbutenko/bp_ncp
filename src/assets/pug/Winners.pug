@@ -1,0 +1,108 @@
+extends _base
+block base
+  script(type='text/javascript').
+    $(function(){$('.wrapper__main').height(1308);});
+  .wrapper__second
+    include _header__second
+    .wrapper__main
+      div.main__layout
+        aside.aside__left.main__menu.main__menu-second
+          div.menu__left
+            div.menu__container
+              nav.menu__list
+                li.menu__item
+                  div.menu__circle-default.menu__circle-default-second
+                  a.menu__link.link__default.link__cabinet(href="Index.html")
+                    span.menu__text.menu__text-second Зарегистрировать чек
+                li.menu__item
+                  div.menu__circle-default.menu__circle-default-second
+                  a.menu__link.link__default.link__cabinet.link__cabinet(href="Shares.html")
+                    span.menu__text.menu__text-second Правила и призы
+                li.menu__item
+                  div.menu__circle-default.menu__circle-default-second.menu__circle-active-second
+                  a.menu__link.link__default.link__cabinet(href="Winners.html")
+                    span.menu__text.menu__text-second Победители
+        div.main__block
+          div.block__layout
+            h1.h1.winners__title Победители акции
+          div.block__layout
+            div.block__layout-tb
+              h3.h3.winners__title-small Еженедельный приз
+              div.prize
+                div.prize__image-container
+                  div.prize__image-container-second
+                    img.prize__image(src="../img/prize-1.png" alt="")
+                table.prize__table
+                  thead
+                    th Дата розыгрыша
+                    th Имя и фамилия
+                  tbody
+                    tr
+                      td 1.11 — 7.11
+                      td Мария Сафронова
+                    tr
+                      td 8.11 — 15.11
+                      td Галина Полецкая
+                    tr
+                      td 16.11 — 23.11
+                      td София Аюхаева
+                    tr
+                      td 24.11 — 30.11
+                      td Виктория Белова
+                    tr
+                      td 1.12 — 7.12
+                      td Ирина Дубцова
+                    tr
+                      td 8.12 — 15.12
+                      td Дарья Шехавцова
+                    tr
+                      td 16.12 — 23.12
+                      td Ирина Маслова
+                    tr
+                      td 24.12 — 31.12
+                      td Элеонора Волнистова
+            div.block__layout-tb
+              h3.h3.winners__title-small Ежемесячный приз
+              div.prize
+                div.prize__image-container
+                  div.prize__image-container-second
+                    img.prize__image(src="../img/prize-2.png" alt="")
+                table.prize__table
+                  thead
+                    th Месяц розыгрыша
+                    th Имя и фамилия
+                  tbody
+                    tr
+                      td Ноябрь
+                      td Алена Перепилицына
+                    tr
+                      td Декабрь
+                      td Екатерина Иванова
+            div.block__layout-tb
+              h3.h3.winners__title-small Главный приз
+              div.prize
+                div.prize__image-container
+                  div.prize__image-container-second
+                    img.prize__image(src="../img/prize-3.png" alt="")
+                table.prize__table
+                  thead
+                    th Город победителя
+                    th Имя и фамилия
+                  tbody
+                    tr
+                      td Москва
+                      td Александра Козырькова
+                    tr
+                      td Омск
+                      td Оля Барулина
+                    tr
+                      td Зеленоград
+                      td Настя Корпачева
+                    tr
+                      td Сыктыквар
+                      td Эльвира Соколова
+                    tr
+                      td Мурманск
+                      td Надя Кузнецова
+    include _footer__second
+    include _footer__after

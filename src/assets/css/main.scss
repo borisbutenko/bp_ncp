@@ -1,0 +1,444 @@
+@import "_reset";
+@import "_fonts";
+
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+.wrapper {
+    &__second {
+        background: url(../img/background__2.jpg) no-repeat center center;
+        background-size: 220%;
+    }
+
+    &__main {
+        min-height: 100%;
+        padding: 0 30px;
+        margin-bottom: -69px;
+        //height: 688px;
+        //min-width: 1353px;
+
+        ::after {
+            content: "";
+            display: block;
+        }
+    }
+}
+
+.aside__left {
+    float: left;
+    width: 65%;
+}
+
+.aside__right {
+    float: left;
+}
+
+.button__default {
+    cursor: pointer;
+}
+
+.button__gold {
+    display: inline-block;
+    background: url(../img/button__gold.png) no-repeat center center;
+    width: 410px;
+    height: 54px;
+    text-align: center;
+    margin-top: 30px;
+
+    &-text:hover {
+        color: #9e8141;
+    }
+
+    &-text {
+        font-size: 2.2rem;
+        line-height: 5.8rem;
+        font-weight: 300;
+        color: #602173;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        display: block;
+    }
+}
+
+.button__silver {
+    display: inline-block;
+    width: 339.5px;
+    height: 54px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #d89a52;
+    text-align: center;
+    color: #d89a52;
+
+    &:hover {
+        color: #fff;
+        background-color: #cfa573;
+    }
+
+    &-text {
+        font-family: "Helvetica Neue Cyr";
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 5.7rem;
+        text-transform: uppercase;
+    }
+}
+
+.button__purple {
+    display: inline-block;
+    height: 43px;
+    border: 1px solid #5e2a8f;
+    border-radius: 50px;
+    line-height: 4.3rem;
+    text-align: center;
+    color: #5e2a8f;
+
+    &:hover {
+        color: #fff;
+        background-color: #5e2a8f;
+    }
+
+    &-bg {
+        background-color: #5e2a8f;
+        color: #fff;
+    }
+
+    &-text {
+        font-family: "Helvetica Neue Cyr";
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+}
+
+.link__default {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#modal__login,
+#modal__check,
+#modal__check-second,
+#modal__check-third,
+#modal__check-forth,
+#modal__check-fifth,
+#modal__faq {
+    display: none;
+    background-color: white;
+    text-align: center;
+}
+
+#modal__faq {
+    text-align: left;
+    padding-left: 20px;
+    overflow-y: scroll;
+
+    .accordion {
+
+        &__title {
+            color: #585858;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 45px;
+            background: url(../img/accordion__closed.png) no-repeat center right;
+            cursor: pointer;
+            padding-right: 25px;
+
+            &-active {
+                background: url(../img/accordion__open.png) no-repeat center right;
+                color: #67408e;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 45px;
+            }
+        }
+
+        span + p {
+            display: none;
+        }
+
+        &__description {
+            color: #67408e;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+        }
+
+        &__description-active {
+            display: block !important;
+            -webkit-transition: 2s;
+            -moz-transition: 2s;
+            -ms-transition: 2s;
+            -o-transition: 2s;
+            transition: 2s;
+        }
+    }
+
+    .modal__title-fifth {
+        padding-top: 45px;
+        color: #5e2a8f;
+        font-family: "Myriad Pro";
+        font-size: 35px;
+        font-weight: 300;
+        line-height: 35px;
+        text-align: center;
+
+        &-first {
+            color: #585858;
+            font-family: "Helvetica Neue Cyr";
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 45px;
+            text-align: left;
+            padding: 34px 0 22px 0;
+        }
+    }
+
+    .input__default {
+        width: 230px;
+        margin: 10px 12px 12px 0;
+    }
+
+    .button__modal {
+        width: 514px;
+        margin: 0;
+    }
+
+    .input__textarea {
+        width: 494px;
+        height: 144px;
+        resize: none;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+#modal__check-forth {
+
+    .modal__description-check-forth {
+        margin-bottom: 34px;
+    }
+
+    .block__left,
+    .block__right {
+        float: none;
+        display: inline-block;
+        width: 50%;
+    }
+
+    .block__left {
+        position: relative;
+        top: -19px;
+        left: 20px;
+    }
+
+    .block__right {
+        position: relative;
+        right: 20px;
+        //top: 11px;
+    }
+
+    .block__layout-sex {
+        display: inline-flex;
+        position: relative;
+        top: 24px;
+        left: -90px;
+    }
+
+    .block__layout-checkbox {
+        position: relative;
+        top: 53px;
+        left: 49px;
+        
+        .modal__layout {
+            text-align: left;
+        }
+    }
+
+    .block__layout-city {
+        position: relative;
+        top: -7px;
+    }
+
+    .block__layout-btn {
+        position: relative;
+        top: 14px;
+    }
+
+    .label__checkbox {
+        width: 260px;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-table;
+        margin-left: 15px;
+        font-weight: 400;
+        line-height: 1.6rem;
+
+        a {
+            color: #999;
+            cursor: pointer;
+        }
+    }
+
+    .label__checkbox-agree + span {
+        position: relative;
+        top: -5px;
+        margin-bottom: 15px;
+    }
+    
+    .input__checkbox {
+        float: left;
+        margin-right: 20px;
+    }
+}
+
+#modal__check-fifth {
+    background-image: url(../img/gift.png);
+    background-repeat: no-repeat;
+    background-position: 15% 25%;
+    
+    .modal__check-fifth-content {
+        text-align: left;
+        padding-top: 95px;
+        padding-left: 356px;
+        margin-bottom: 60px;
+    }
+
+    .modal__description-check-fifth {
+        max-width: 380px;
+    }
+
+    .modal__title-fifth {
+        color: #5e2a8f;
+        font-family: "Myriad Pro";
+        font-size: 4rem;
+        font-weight: 300;
+        line-height: 3.5rem;
+
+        &-first {
+            font-size: 3rem;
+            color: #5e2a8f;
+            margin: 16px 0 19px;
+        }
+
+        &-last {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            color: #5e2a8f;
+        }
+    }
+}
+
+.modal__title {
+    color: #5e2a8f;
+    font-family: "Myriad Pro";
+    font-size: 3.5rem;
+    font-weight: 300;
+    padding: 45px 0 40px;
+
+    &-check {
+        padding-bottom: 25px;
+    }
+
+    &-check-second {
+        padding-bottom: 68px;
+    }
+
+    &-check-forth {
+        padding-bottom: 23px
+    }
+}
+
+.modal__description {
+    display: inline-block;
+    max-width: 350px;
+    color: #585858;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+    margin-bottom: 35px;
+
+    &-check {
+        margin-bottom: 20px;
+    }
+
+    &-check-second {
+        max-width: 522px;
+    }
+}
+
+.modal__link {
+    color: #d89a52;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 1.8rem;
+    font-weight: 300;
+
+    &-check {
+        text-decoration: none;
+        padding-right: 30px;
+        background: url(../img/modal__link-arrow.png) no-repeat center right;
+
+        & .button__silver-text {
+            border-bottom: 1px dashed #d89a52;
+        }
+    }
+
+    & > .button__silver-text::first-letter {
+        text-transform: uppercase;
+    }
+
+    & > .button__silver-text {
+        text-transform: none;
+        font-size: 1.8rem;
+    }
+}
+
+.modal__check-image {
+    height: 130px;
+    background: url(../img/modal__check-image.png) no-repeat center center;
+    background-position-y: -15px;
+}
+
+.button__modal {
+    margin: 24px 0 0;
+    text-decoration: none;
+}
+
+.ui-widget-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.ui-dialog {
+    position: absolute;
+    z-index: 1000;
+    margin: 0 auto;
+    left: 0 !important;
+    right: 0;
+}
+
+.ui-dialog-titlebar {
+    position: absolute;
+    right: 0;
+}
+
+.ui-button {
+    width: 51px;
+    height: 51px;
+    background-image: url(../img/close.jpg);
+    border: none;
+    cursor: pointer;
+}
+
+@import "_header";
+@import "_index";
+@import "_footer";

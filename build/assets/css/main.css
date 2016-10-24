@@ -1,0 +1,1296 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul, nav {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: "Helvetica Neue Cyr";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/helveticaneuecyr-thin-0.eot?") format("eot"), url("../fonts/helveticaneuecyr-thin-0.woff2") format("woff2"), url("../fonts/helveticaneuecyr-thin-0.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Helvetica Neue Cyr";
+    font-style: italic;
+    font-weight: normal;
+    src: url("../fonts/helveticaneuecyr-thinitalic-0.eot?") format("eot"), url("../fonts/helveticaneuecyr-thinitalic-0.woff2") format("woff2"), url("../fonts/helveticaneuecyr-thinitalic-0.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/myriadpro-light.eot?") format("eot"), url("../fonts/myriadpro-light.woff2") format("woff2"), url("../fonts/myriadpro-light.woff") format("woff");
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+.wrapper__second {
+    background: url(../img/background__2.jpg) no-repeat center center;
+    background-size: 220%;
+}
+
+.wrapper__main {
+    min-height: 100%;
+    padding: 0 30px;
+    margin-bottom: -69px;
+}
+
+.wrapper__main ::after {
+    content: "";
+    display: block;
+}
+
+.aside__left {
+    float: left;
+    width: 65%;
+}
+
+.aside__right {
+    float: left;
+}
+
+.button__default {
+    cursor: pointer;
+}
+
+.button__gold {
+    display: inline-block;
+    background: url(../img/button__gold.png) no-repeat center center;
+    width: 410px;
+    height: 54px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.button__gold-text:hover {
+    color: #9e8141;
+}
+
+.button__gold-text {
+    font-size: 2.2rem;
+    line-height: 5.8rem;
+    font-weight: 300;
+    color: #602173;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    display: block;
+}
+
+.button__silver {
+    display: inline-block;
+    width: 339.5px;
+    height: 54px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #d89a52;
+    text-align: center;
+    color: #d89a52;
+}
+
+.button__silver:hover {
+    color: #fff;
+    background-color: #cfa573;
+}
+
+.button__silver-text {
+    font-family: "Helvetica Neue Cyr";
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 5.7rem;
+    text-transform: uppercase;
+}
+
+.button__purple {
+    display: inline-block;
+    height: 43px;
+    border: 1px solid #5e2a8f;
+    border-radius: 50px;
+    line-height: 4.3rem;
+    text-align: center;
+    color: #5e2a8f;
+}
+
+.button__purple:hover {
+    color: #fff;
+    background-color: #5e2a8f;
+}
+
+.button__purple-bg {
+    background-color: #5e2a8f;
+    color: #fff;
+}
+
+.button__purple-text {
+    font-family: "Helvetica Neue Cyr";
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.link__default {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#modal__login,
+#modal__check,
+#modal__check-second,
+#modal__check-third,
+#modal__check-forth,
+#modal__check-fifth,
+#modal__faq {
+    display: none;
+    background-color: white;
+    text-align: center;
+}
+
+#modal__faq {
+    text-align: left;
+    padding-left: 20px;
+    overflow-y: scroll;
+}
+
+#modal__faq .accordion__title {
+    color: #585858;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 45px;
+    background: url(../img/accordion__closed.png) no-repeat center right;
+    cursor: pointer;
+    padding-right: 25px;
+}
+
+#modal__faq .accordion__title-active {
+    background: url(../img/accordion__open.png) no-repeat center right;
+    color: #67408e;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 45px;
+}
+
+#modal__faq .accordion span + p {
+    display: none;
+}
+
+#modal__faq .accordion__description {
+    color: #67408e;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+#modal__faq .accordion__description-active {
+    display: block !important;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+}
+
+#modal__faq .modal__title-fifth {
+    padding-top: 45px;
+    color: #5e2a8f;
+    font-family: "Myriad Pro";
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 35px;
+    text-align: center;
+}
+
+#modal__faq .modal__title-fifth-first {
+    color: #585858;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 45px;
+    text-align: left;
+    padding: 34px 0 22px 0;
+}
+
+#modal__faq .input__default {
+    width: 230px;
+    margin: 10px 12px 12px 0;
+}
+
+#modal__faq .button__modal {
+    width: 514px;
+    margin: 0;
+}
+
+#modal__faq .input__textarea {
+    width: 494px;
+    height: 144px;
+    resize: none;
+    margin: 0;
+    padding: 10px;
+}
+
+#modal__check-forth .modal__description-check-forth {
+    margin-bottom: 34px;
+}
+
+#modal__check-forth .block__left,
+#modal__check-forth .block__right {
+    float: none;
+    display: inline-block;
+    width: 50%;
+}
+
+#modal__check-forth .block__left {
+    position: relative;
+    top: -19px;
+    left: 20px;
+}
+
+#modal__check-forth .block__right {
+    position: relative;
+    right: 20px;
+}
+
+#modal__check-forth .block__layout-sex {
+    display: inline-flex;
+    position: relative;
+    top: 24px;
+    left: -90px;
+}
+
+#modal__check-forth .block__layout-checkbox {
+    position: relative;
+    top: 53px;
+    left: 49px;
+}
+
+#modal__check-forth .block__layout-checkbox .modal__layout {
+    text-align: left;
+}
+
+#modal__check-forth .block__layout-city {
+    position: relative;
+    top: -7px;
+}
+
+#modal__check-forth .block__layout-btn {
+    position: relative;
+    top: 14px;
+}
+
+#modal__check-forth .label__checkbox {
+    width: 260px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-table;
+    margin-left: 15px;
+    font-weight: 400;
+    line-height: 1.6rem;
+}
+
+#modal__check-forth .label__checkbox a {
+    color: #999;
+    cursor: pointer;
+}
+
+#modal__check-forth .label__checkbox-agree + span {
+    position: relative;
+    top: -5px;
+    margin-bottom: 15px;
+}
+
+#modal__check-forth .input__checkbox {
+    float: left;
+    margin-right: 20px;
+}
+
+#modal__check-fifth {
+    background-image: url(../img/gift.png);
+    background-repeat: no-repeat;
+    background-position: 15% 25%;
+}
+
+#modal__check-fifth .modal__check-fifth-content {
+    text-align: left;
+    padding-top: 95px;
+    padding-left: 356px;
+    margin-bottom: 60px;
+}
+
+#modal__check-fifth .modal__description-check-fifth {
+    max-width: 380px;
+}
+
+#modal__check-fifth .modal__title-fifth {
+    color: #5e2a8f;
+    font-family: "Myriad Pro";
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 3.5rem;
+}
+
+#modal__check-fifth .modal__title-fifth-first {
+    font-size: 3rem;
+    color: #5e2a8f;
+    margin: 16px 0 19px;
+}
+
+#modal__check-fifth .modal__title-fifth-last {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: #5e2a8f;
+}
+
+.modal__title {
+    color: #5e2a8f;
+    font-family: "Myriad Pro";
+    font-size: 3.5rem;
+    font-weight: 300;
+    padding: 45px 0 40px;
+}
+
+.modal__title-check {
+    padding-bottom: 25px;
+}
+
+.modal__title-check-second {
+    padding-bottom: 68px;
+}
+
+.modal__title-check-forth {
+    padding-bottom: 23px;
+}
+
+.modal__description {
+    display: inline-block;
+    max-width: 350px;
+    color: #585858;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+    margin-bottom: 35px;
+}
+
+.modal__description-check {
+    margin-bottom: 20px;
+}
+
+.modal__description-check-second {
+    max-width: 522px;
+}
+
+.modal__link {
+    color: #d89a52;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.modal__link-check {
+    text-decoration: none;
+    padding-right: 30px;
+    background: url(../img/modal__link-arrow.png) no-repeat center right;
+}
+
+.modal__link-check .button__silver-text {
+    border-bottom: 1px dashed #d89a52;
+}
+
+.modal__link > .button__silver-text::first-letter {
+    text-transform: uppercase;
+}
+
+.modal__link > .button__silver-text {
+    text-transform: none;
+    font-size: 1.8rem;
+}
+
+.modal__check-image {
+    height: 130px;
+    background: url(../img/modal__check-image.png) no-repeat center center;
+    background-position-y: -15px;
+}
+
+.button__modal {
+    margin: 24px 0 0;
+    text-decoration: none;
+}
+
+.ui-widget-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.ui-dialog {
+    position: absolute;
+    z-index: 1000;
+    margin: 0 auto;
+    left: 0 !important;
+    right: 0;
+}
+
+.ui-dialog-titlebar {
+    position: absolute;
+    right: 0;
+}
+
+.ui-button {
+    width: 51px;
+    height: 51px;
+    background-image: url(../img/close.jpg);
+    border: none;
+    cursor: pointer;
+}
+
+.header {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #fff;
+    font-family: "Helvetica Neue Cyr";
+    padding: 0 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.header__second {
+    border-top: 1px solid #e3e4e6;
+}
+
+.header__logo {
+    padding-top: 20px;
+}
+
+.header__auth {
+    float: right;
+    padding-top: 20px;
+}
+
+.header .auth__button {
+    background: #392148 url(../img/lk.png) no-repeat right center;
+    display: inline-block;
+    padding-right: 40px;
+    height: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header .auth__button-second {
+    background: url(../img/lk__2.png) no-repeat right center;
+}
+
+.header .auth__button .auth__text {
+    line-height: 2.5rem;
+}
+
+.header .auth__button .auth__text-second {
+    color: #5e2a8f;
+}
+
+.main__layout {
+    position: relative;
+    height: 100%;
+}
+
+.main__layout .main__block {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.main__layout .main__block .block__layout {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.main__layout .main__block .block__layout-btn {
+    margin: 31px 0;
+}
+
+.main__layout .main__block .block__layout-btn .button__purple:first-child {
+    width: 208px;
+    margin-right: 10px;
+}
+
+.main__layout .main__block .block__layout-btn .button__purple:last-child {
+    width: 128px;
+    margin-left: 10px;
+}
+
+.main__layout .main__block .block__layout-sex {
+    display: inline-flex;
+    float: left;
+    padding: 20px 0 29px 23px;
+}
+
+.main__layout .main__block .block__layout .winners__title {
+    color: #5e2a8f;
+    font-family: "Myriad Pro";
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.main__layout .main__block .block__layout-tb {
+    margin-bottom: 40px;
+}
+
+.main__layout .main__block .block__layout-tb .winners__title-small {
+    color: #5e2a8f;
+    font-family: "Myriad Pro";
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+.main__layout .main__block .block__layout-lk-silver {
+    position: relative;
+    bottom: 4px;
+}
+
+.main__layout .main__menu {
+    font-family: "Helvetica Neue Cyr";
+    font-size: 1.8rem;
+    display: table;
+    height: 880px;
+    max-height: 880px;
+}
+
+.main__layout .main__menu-second {
+    position: absolute;
+    float: none;
+    width: auto;
+}
+
+.main__layout .main__menu .menu__left {
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 1;
+    position: fixed;
+    top: 400px;
+    left: 20px;
+}
+
+.main__layout .main__menu .menu__left .menu__container .menu__item {
+    display: table;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.main__layout .main__menu .menu__left .menu__container .menu__circle-default {
+    display: inline-block;
+    overflow: hidden;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    border: 2.5px solid #fff;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    margin: -5px 5.5px 0;
+}
+
+.main__layout .main__menu .menu__left .menu__container .menu__circle-default-second {
+    border: 2.5px solid #5e2a8f;
+}
+
+.main__layout .main__menu .menu__left .menu__container .menu__circle-default-hover {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.main__layout .main__menu .menu__left .menu__container .menu__circle-active {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: none;
+    margin: -5px 3px;
+}
+
+.main__layout .main__menu .menu__left .menu__container .menu__circle-active-second {
+    background: #5e2a8f;
+}
+
+.main__layout .main__menu .menu__left .menu__container .menu__link {
+    position: relative;
+    bottom: 7px;
+    left: 3px;
+}
+
+.main__layout .main__menu .menu__left .menu__container .menu__text {
+    color: #fff;
+}
+
+.main__layout .main__menu .menu__left .menu__container .menu__text-second {
+    color: #5e2a8f;
+}
+
+.main__layout .main__shares {
+    font-family: "Helvetica Neue Cyr";
+    font-size: 2rem;
+    line-height: 2.2rem;
+    color: #fff;
+    font-weight: 300;
+    position: relative;
+    height: 100%;
+}
+
+.main__layout .main__shares .shares__container-a {
+    display: table;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.main__layout .main__shares .shares__container-text {
+    position: relative;
+    top: -50px;
+}
+
+.main__layout .main__shares .shares__container-text .shares__image-title {
+    margin-bottom: 42px;
+}
+
+.main__layout .main__shares .shares__container-text .shares__container-item .shares__list {
+    height: 270px;
+    background: url(../img/shares.png) no-repeat right bottom;
+}
+
+.main__layout .main__shares .shares__container-text .shares__container-item .shares__list .shares__item {
+    background: url(../img/circle__gold.png) no-repeat center left;
+    height: 61px;
+    display: table;
+    vertical-align: middle;
+    margin-bottom: 26px;
+}
+
+.main__layout .main__shares .shares__container-text .shares__container-item .shares__list .shares__item .shares__text {
+    padding-left: 88px;
+    position: relative;
+    line-height: 2.2rem;
+    top: 7px;
+}
+
+.main__layout .main__shares .shares__container-text .shares__container-item .shares__list .shares__item .shares__text span {
+    font-size: 4.5rem;
+    font-weight: 100;
+    position: absolute;
+    left: 18.5px;
+    top: 15px;
+}
+
+.main__layout .main__shares .shares__container-text .shares__container-item .shares__list .shares__item .shares__text p:first-of-type {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.main__layout .main__shares .shares__container-text .shares__container-item .shares__list .shares__item:last-of-type {
+    margin-top: -13px;
+}
+
+.main__layout .main__shares .shares__container-text .shares__container-item .shares__list .shares__item:last-of-type .shares__text span {
+    top: 30px;
+}
+
+.input__default {
+    width: 320px;
+    height: 45px;
+    background-color: #f9f9fa;
+    border: 1px solid #d8d8d8;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 1.75rem;
+    font-weight: 300;
+    padding: 5px 0 0 20px;
+    cursor: pointer;
+}
+
+.input__default + span {
+    font-family: "Helvetica Neue Cyr";
+    font-size: 1rem;
+    font-weight: 500;
+    color: #999 !important;
+    position: absolute;
+    margin-left: -320px;
+    margin-top: 6px;
+}
+
+.input__default-day, .input__default-year {
+    width: 78px;
+}
+
+.input__radio {
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.input__radio:not(checked) {
+    position: relative;
+    opacity: 0;
+    z-index: 10;
+    left: 20px;
+    bottom: 0px;
+}
+
+.input__radio:not(checked) + label {
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    top: -1.5px;
+}
+
+.input__radio:not(checked) + label::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #CDD1DA;
+    border-radius: 50%;
+}
+
+.input__radio:not(checked) + label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    opacity: 0;
+    transition: all .2s;
+}
+
+.input__radio:not(checked) + label.label__radio-active::after {
+    background: #5e2a8f;
+}
+
+.input__radio:not(checked) + label.label__radio-active::before {
+    background: #FFF;
+}
+
+.input__radio:checked + label::after {
+    opacity: 1;
+}
+
+.input__radio:checked + label.label__radio-active::before {
+    border: 1px solid #5e2a8f;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    background: #ffffff;
+    border: 1px solid #CDD1DA;
+}
+
+[type="checkbox"]:checked + label:before {
+    border: 1px solid #5e2a8f;
+}
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    content: '';
+    background: url(../img/checkbox__check.png) no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+}
+
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+
+[type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+}
+
+[type="checkbox"]:disabled + label {
+    color: #aaa;
+}
+
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+    border: 1px dotted blue;
+    border: 1px solid #5e2a8f;
+}
+
+.cabinet__title {
+    color: #5e2a8f;
+    font-family: "Myriad Pro";
+    font-size: 4rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.block__left,
+.block__right {
+    float: left;
+    width: 50%;
+}
+
+.block__right .input__default {
+    margin-bottom: 30px;
+}
+
+.block__check {
+    display: none;
+}
+
+.select__default {
+    width: 141px;
+    height: 52px;
+    background-color: #f9f9fa;
+    border: 1px solid #d8d8d8;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 1.75rem;
+    font-weight: 300;
+    padding-left: 20px;
+    cursor: pointer;
+    position: relative;
+    top: -2px;
+}
+
+.select__disabled {
+    color: #bfbfc4;
+}
+
+.input__default[disabled],
+.input__radio[disabled],
+.select__disabled[disabled] {
+    cursor: default;
+}
+
+.label__default {
+    font-size: 1.8rem;
+    font-family: "Helvetica Neue Cyr";
+    color: #999;
+    font-weight: 300;
+}
+
+.label__date {
+    position: relative;
+    right: 107px;
+    bottom: 11px;
+}
+
+.prize {
+    display: inline-flex;
+    width: 690px;
+    background-color: white;
+    margin-top: 5px;
+}
+
+.prize__image {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.prize__image-container {
+    position: relative;
+    width: 244px;
+}
+
+.prize__image-container-second {
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -70px 0 0 -170px;
+}
+
+.prize__table {
+    font-family: "Helvetica Neue Cyr";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 45px;
+    text-align: left;
+    margin: 30px 0 20px;
+}
+
+.prize__table thead {
+    border-bottom: 1px solid #dedede;
+}
+
+.prize__table thead th {
+    width: 50%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #585858;
+    line-height: 2.5rem;
+}
+
+.prize__table tbody tr td {
+    color: #585858;
+}
+
+.prize__table tbody tr td:last-child {
+    color: #7e55a5;
+}
+
+.check {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.check__table {
+    width: 650px;
+    position: relative;
+    margin: 45px auto;
+}
+
+.check__table thead th:nth-child(n-2) {
+    width: 120px;
+}
+
+.check__table thead th:nth-child(n+3) {
+    width: 30%;
+}
+
+.check .block__layout-lk-silver {
+    padding-bottom: 45px;
+}
+
+.share .line__dashed-container {
+    position: absolute;
+    left: 27px;
+    right: 0;
+    margin: -65px auto;
+    z-index: 10;
+    width: 100%;
+    height: 200px;
+}
+
+.share .line__dashed {
+    height: 200px;
+}
+
+.share .share__container {
+    position: relative;
+    z-index: 100;
+    height: 275px;
+}
+
+.share__title {
+    margin-bottom: 40px;
+}
+
+.share__title-second {
+    padding: 45px 0 18px;
+}
+
+.share__item {
+    float: left;
+    width: 33.33333%;
+    display: inline-block;
+    margin-bottom: 32px;
+}
+
+.share__item img {
+    height: 150px;
+    position: relative;
+    z-index: 100;
+}
+
+.share__item figcaption {
+    font-family: "Helvetica Neue Cyr";
+    color: #585858;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2rem;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.share__item figcaption::first-line {
+    color: #5e2a8f;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+}
+
+.share__item-prize {
+    width: 259px;
+    min-height: 250px;
+    background-color: white;
+    float: left;
+    margin-right: 1px;
+}
+
+.share__item-prize .prize__title {
+    color: #5e2a8f;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+    padding: 20px 0 16px;
+}
+
+.share__item-prize img {
+    height: 120px;
+    margin-bottom: 5px;
+}
+
+.share__item-prize figcaption {
+    color: #585858;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.2rem;
+    height: 20px;
+}
+
+.block__layout-saves {
+    text-align: left !important;
+    margin-top: 40px;
+}
+
+.block__layout-saves .saves {
+    display: inline-flex;
+    color: #585858;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.block__layout-saves .saves span {
+    margin-right: 3px;
+    color: #585858;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 1.4rem;
+    font-weight: 700;
+    position: relative;
+    top: -2px;
+}
+
+.footer,
+.wrapper:after {
+    height: 69px;
+}
+
+.footer {
+    opacity: 0.7;
+    background-color: #43255e;
+    padding: 0 30px;
+}
+
+.footer__second {
+    background: #fff;
+}
+
+.footer .social {
+    position: absolute;
+    margin-top: 20px;
+    z-index: 10;
+}
+
+.footer .social__item {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.footer .social__faq {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    background: #392148 url(../img/faq.png) no-repeat center center;
+    margin-right: 12px;
+    position: relative;
+    top: 1.5px;
+}
+
+.footer .social__faq:hover {
+    background: #392148 url(../img/faq__hover.png) no-repeat center center;
+}
+
+.footer .social__ok {
+    background: #392148 url(../img/ok.png) no-repeat center center;
+}
+
+.footer .social__ok:hover {
+    background: #392148 url(../img/ok__hover.png) no-repeat center center;
+}
+
+.footer .social__vk {
+    background: #392148 url(../img/vk.png) no-repeat center center;
+}
+
+.footer .social__vk:hover {
+    background: #392148 url(../img/vk__hover.png) no-repeat center center;
+}
+
+.footer__img-title {
+    background: url(../img/footer__title.png) no-repeat top center;
+    height: 20px;
+    position: relative;
+    top: 14px;
+}
+
+.footer__img-title-second {
+    background: url(../img/footer__title-second.png) no-repeat top center;
+    top: 24px;
+}
+
+.footer__after {
+    width: 100%;
+    height: 109px;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    color: #585858;
+    font-family: "Helvetica Neue Cyr";
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.footer__after p {
+    height: 14px;
+}
+
+.footer__after-container {
+    width: 900px;
+    display: inline-flex;
+}
+
+.footer__after-block {
+    float: left;
+    min-width: 300px;
+}
+
+.footer__after-text {
+    text-align: left;
+    display: table;
+}
+
+.footer__after-link {
+    text-align: left;
+    color: #585858;
+    text-decoration: underline;
+    float: left;
+    margin-top: 17px;
+    margin-right: 34px;
+    cursor: pointer;
+}
+
+.footer__after-link * {
+    display: inline-block;
+    text-decoration: underline;
+}
