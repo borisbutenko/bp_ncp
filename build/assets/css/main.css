@@ -218,6 +218,7 @@ html, body {
     cursor: pointer;
     padding-right: 25px;
     font-family: "Helvetica Neue Cyr";
+    width: 490px;
 }
 
 #modal__faq .accordion__title-active {
@@ -232,6 +233,7 @@ html, body {
 #modal__faq .accordion span + p {
     display: none;
     padding: 10px 30px;
+    width: 490px;
 }
 
 #modal__faq .accordion__description {

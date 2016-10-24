@@ -148,6 +148,7 @@ html, body {
             cursor: pointer;
             padding-right: 25px;
             font-family: "Helvetica Neue Cyr";
+            width: 490px;
 
             &-active {
                 background: url(../img/accordion__open.png) no-repeat center right;
@@ -162,6 +163,7 @@ html, body {
         span + p {
             display: none;
             padding: 10px 30px;
+            width: 490px;
         }
 
         &__description {
