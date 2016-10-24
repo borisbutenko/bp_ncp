@@ -231,6 +231,7 @@ html, body {
 
 #modal__faq .accordion span + p {
     display: none;
+    padding: 10px 30px;
 }
 
 #modal__faq .accordion__description {
