@@ -1,12 +1,8 @@
-.footer,
-.wrapper:after {
-    height: 69px;
-}
-
 .footer {
     opacity: 0.7;
     background-color: #43255e;
     padding: 0 30px;
+    clear: both;
 
     &__second {
         background: #fff;

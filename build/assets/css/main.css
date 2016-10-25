@@ -78,7 +78,7 @@ html {
 }
 
 html, body {
-    min-height: 100%;
+    height: 100%;
 }
 
 .wrapper__second {
@@ -87,23 +87,19 @@ html, body {
 }
 
 .wrapper__main {
-    min-height: 100%;
     padding: 0 30px;
-    margin-bottom: -69px;
-}
-
-.wrapper__main ::after {
-    content: "";
-    display: block;
 }
 
 .aside__left {
-    float: left;
-    width: 65%;
+    display: inline-block !important;
+    width: 64%;
 }
 
 .aside__right {
-    float: left;
+    display: inline-block !important;
+    position: absolute !important;
+    top: 10%;
+    width: 34%;
 }
 
 .button__default {
@@ -521,10 +517,12 @@ html, body {
     padding: 0 30px;
     position: relative;
     z-index: 10;
+    margin-bottom: -67px;
 }
 
 .header__second {
     border-top: 1px solid #e3e4e6;
+    margin-bottom: 0;
 }
 
 .header__logo {
@@ -634,12 +632,17 @@ html, body {
 }
 
 .main__layout .main__menu .menu__left {
-    display: table-cell;
-    vertical-align: middle;
-    position: relative;
-    bottom: 102px;
-    left: -5px;
+    display: inline-table;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     z-index: 1;
+    margin: auto;
+    padding-bottom: 106px;
+}
+
+.main__layout .main__menu .menu__left .menu__container .menu__list {
+    width: 220px;
 }
 
 .main__layout .main__menu .menu__left .menu__container .menu__item {
@@ -710,13 +713,13 @@ html, body {
 }
 
 .main__layout .main__shares .shares__container-a {
-    display: table;
-    margin: auto;
-    position: relative;
-    top: 80px;
     left: 0;
-    bottom: 0;
     right: 0;
+    display: inline-table;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .main__layout .main__shares .shares__container-text {
@@ -986,6 +989,7 @@ html, body {
 }
 
 .label__date {
+    display: block;
     position: relative;
     right: 107px;
     bottom: 11px;
@@ -1182,7 +1186,7 @@ html, body {
 
 .block__layout-saves {
     text-align: left !important;
-    margin-top: 40px;
+    margin: 30px 0 15px;
     opacity: 0;
 }
 
@@ -1229,15 +1233,11 @@ svg {
     }
 }
 
-.footer,
-.wrapper:after {
-    height: 69px;
-}
-
 .footer {
     opacity: 0.7;
     background-color: #43255e;
     padding: 0 30px;
+    clear: both;
 }
 
 .footer__second {
@@ -1363,4 +1363,19 @@ svg {
     right: 0;
     margin-top: 30px;
     cursor: pointer;
+}
+
+.wrapper__main {
+    min-height: 100%;
+    margin-bottom: -69px;
+}
+
+.wrapper__main::after {
+    content: "";
+    display: block;
+}
+
+footer,
+.wrapper__main::after {
+    height: 69px;
 }

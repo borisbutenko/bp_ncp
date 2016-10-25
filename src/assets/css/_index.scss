@@ -72,19 +72,25 @@
         }
 
         .menu__left {
-            display: table-cell;
-            vertical-align: middle;
-            position: relative;
-            bottom: 102px;
-            left: -5px;
+            //display: table-cell;
+            //vertical-align: middle;
+            //position: relative;
+            //bottom: 102px;
+            //left: -5px;
+            //z-index: 1;
+            display: inline-table;
+            position: absolute;
+            top: 0;
+            bottom: 0;
             z-index: 1;
-            //position: fixed;
-            //top: 400px;
-            //left: 20px;
+            margin: auto;
+            padding-bottom: 106px;
 
             .menu__container {
 
-                .menu__list {}
+                .menu__list {
+                    width: 220px;
+                }
 
                 .menu__item {
                     display: table;
@@ -159,13 +165,13 @@
         //top: 155px;
 
         .shares__container-a {
-            display: table;
-            margin: auto;
-            position: relative;
-            top: 80px;
             left: 0;
-            bottom: 0;
             right: 0;
+            display: inline-table;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
         }
 
         .shares__container-text {
@@ -448,6 +454,7 @@
 .label__radio {}
 
 .label__date {
+    display: block;
     position: relative;
     right: 107px;
     bottom: 11px;
@@ -664,7 +671,7 @@
 
 .block__layout-saves {
     text-align: left !important;
-    margin-top: 40px;
+    margin: 30px 0 15px;
     opacity: 0;
 
     .saves {

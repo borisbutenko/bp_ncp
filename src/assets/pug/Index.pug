@@ -10,15 +10,15 @@ block base
               nav.menu__list
                 li.menu__item
                   div.menu__circle-default.menu__circle-active
-                  a.menu__link.link__default(href="Index.html")
+                  a.menu__link.link__default(data-scroll="checks")
                     span.menu__text Зарегистрировать чек
                 li.menu__item
                   div.menu__circle-default
-                  a.menu__link.link__default(href="Shares.html")
+                  a.menu__link.link__default(data-scroll="prizes")
                     span.menu__text Правила и призы
                 li.menu__item
                   div.menu__circle-default
-                  a.menu__link.link__default(href="Winners.html")
+                  a.menu__link.link__default(data-scroll="winners")
                     span.menu__text Победители
         aside.aside__right.main__shares
           div.shares__container-a
@@ -47,4 +47,170 @@ block base
                 a.button__gold.button__default(data-target='registration-check')
                   span.button__gold-text Зарегистрировать чек
     include _footer
-    include _modals
+  .wrapper__second
+    include _header__second
+    .wrapper__main.wrapper__prizes
+      div.main__layout
+        aside.aside__left.main__menu.main__menu-second
+          div.menu__left
+            div.menu__container
+              nav.menu__list
+                li.menu__item
+                  div.menu__circle-default.menu__circle-default-second
+                  a.menu__link.link__default.link__cabinet(data-scroll="checks")
+                    span.menu__text.menu__text-second Зарегистрировать чек
+                li.menu__item
+                  div.menu__circle-default.menu__circle-default-second.menu__circle-active-second
+                  a.menu__link.link__default.link__cabinet.link__cabinet(data-scroll="prizes")
+                    span.menu__text.menu__text-second Правила и призы
+                li.menu__item
+                  div.menu__circle-default.menu__circle-default-second
+                  a.menu__link.link__default.link__cabinet(data-scroll="winners")
+                    span.menu__text.menu__text-second Победители
+        div.main__block.share
+          div.block__layout
+            h1.h1.cabinet__title.share__title Правила Акции
+          div.block__layout
+            div.line__dashed-container
+              svg(xmlns="http://www.w3.org/2000/svg" width="1024px" height="200px" viewBox="0 0 1024 292")
+                path(class="path" fill="none" stroke="#A68CBE" stroke-linejoin="round" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="7" d="M99.41,143.625 c66.774-46.855,168.37-57.852,211.775,10.72c18.415,29.092-28.108,38.254-28.461,10.719c-0.215-16.842,25.428-33.927,60.66-36.656 c0,0,56.506-16.124,134.061,21.125c64.312,30.887,149.084,33.15,175.894-29.089c31.014-71.992-41.635-64.016-37.968-31.685 c1.729,15.25,26.346,35.357,59.509,44.026c0,0,21.953,19.121,215.62-10.692c18.284-2.814,28.395-12.247,28.768-29.032 c0.438-19.675-24.067-23.348-30.964-8.395c-6.462,14.013,10.23,22.405,17.935,17.664")
+                path(class="dashed" fill="none" stroke="#e9eaec" stroke-linejoin="round" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="7" d="M99.41,143.625 c66.774-46.855,168.37-57.852,211.775,10.72c18.415,29.092-28.108,38.254-28.461,10.719c-0.215-16.842,25.428-33.927,60.66-36.656 c0,0,56.506-16.124,134.061,21.125c64.312,30.887,149.084,33.15,175.894-29.089c31.014-71.992-41.635-64.016-37.968-31.685 c1.729,15.25,26.346,35.357,59.509,44.026c0,0,21.953,19.121,215.62-10.692c18.284-2.814,28.395-12.247,28.768-29.032 c0.438-19.675-24.067-23.348-30.964-8.395c-6.462,14.013,10.23,22.405,17.935,17.664")
+            div.share__container
+              figure.share__item
+                img(src="../img/share-1.png")
+                figcaption Покупайте<br>любые средства<br>по уходу за кожей лица<br>«Черный Жемчуг»
+              figure.share__item
+                img(src="../img/share-2.png")
+                figcaption Регистрируйте <br> чеки на сайте с 1 ноября<br>по 31 декабря 2016 года*
+              figure.share__item
+                img(src="../img/share-3.png")
+                figcaption Участвуйте <br> в розыгрыше призов
+          div.block__layout
+            a.button__silver.button__default(data-target='#')
+              span.button__silver-text Полные правила акции
+          div.block__layout
+            h1.h1.cabinet__title.share__title-second Призы
+          div.block__layout.block__layout-prizes
+            div
+              figure.share__item-prize
+                p.prize__title Еженедельно
+                img(src="../img/prize-1.png")
+                figcaption
+                figcaption Массажер для лица
+              figure.share__item-prize
+                p.prize__title Ежемесячно
+                img(src="../img/prize-2.png")
+                figcaption
+                figcaption SPA-девичник
+              figure.share__item-prize
+                p.prize__title Главный приз
+                img(src="../img/prize-3.png")
+                figcaption Увидеть себя на билбордерде<br>в своем городе
+          div.block__layout.block__layout-saves
+            p.saves #[span *] Сохраняйте чеки до конца акции
+    include _footer__second
+  .wrapper__second
+    include _header__second
+    .wrapper__main.wrapper__winners
+      div.main__layout
+        aside.aside__left.main__menu.main__menu-second
+          div.menu__left
+            div.menu__container
+              nav.menu__list
+                li.menu__item
+                  div.menu__circle-default.menu__circle-default-second
+                  a.menu__link.link__default.link__cabinet(data-scroll="checks")
+                    span.menu__text.menu__text-second Зарегистрировать чек
+                li.menu__item
+                  div.menu__circle-default.menu__circle-default-second
+                  a.menu__link.link__default.link__cabinet.link__cabinet(data-scroll="prizes")
+                    span.menu__text.menu__text-second Правила и призы
+                li.menu__item
+                  div.menu__circle-default.menu__circle-default-second.menu__circle-active-second
+                  a.menu__link.link__default.link__cabinet(data-scroll="winners")
+                    span.menu__text.menu__text-second Победители
+        div.main__block
+          div.block__layout
+            h1.h1.winners__title Победители акции
+          div.block__layout
+            div.block__layout-tb
+              h3.h3.winners__title-small Еженедельный приз
+              div.prize
+                div.prize__image-container
+                  div.prize__image-container-second
+                    img.prize__image(src="../img/prize-1.png" alt="")
+                table.prize__table
+                  thead
+                    th Дата розыгрыша
+                    th Имя и фамилия
+                  tbody
+                    tr
+                      td 1.11 — 7.11
+                      td Мария Сафронова
+                    tr
+                      td 8.11 — 15.11
+                      td Галина Полецкая
+                    tr
+                      td 16.11 — 23.11
+                      td София Аюхаева
+                    tr
+                      td 24.11 — 30.11
+                      td Виктория Белова
+                    tr
+                      td 1.12 — 7.12
+                      td Ирина Дубцова
+                    tr
+                      td 8.12 — 15.12
+                      td Дарья Шехавцова
+                    tr
+                      td 16.12 — 23.12
+                      td Ирина Маслова
+                    tr
+                      td 24.12 — 31.12
+                      td Элеонора Волнистова
+            div.block__layout-tb
+              h3.h3.winners__title-small Ежемесячный приз
+              div.prize
+                div.prize__image-container
+                  div.prize__image-container-second
+                    img.prize__image(src="../img/prize-2.png" alt="")
+                table.prize__table
+                  thead
+                    th Месяц розыгрыша
+                    th Имя и фамилия
+                  tbody
+                    tr
+                      td Ноябрь
+                      td Алена Перепилицына
+                    tr
+                      td Декабрь
+                      td Екатерина Иванова
+            div.block__layout-tb
+              h3.h3.winners__title-small Главный приз
+              div.prize
+                div.prize__image-container
+                  div.prize__image-container-second
+                    img.prize__image(src="../img/prize-3.png" alt="")
+                table.prize__table
+                  thead
+                    th Город победителя
+                    th Имя и фамилия
+                  tbody
+                    tr
+                      td Москва
+                      td Александра Козырькова
+                    tr
+                      td Омск
+                      td Оля Барулина
+                    tr
+                      td Зеленоград
+                      td Настя Корпачева
+                    tr
+                      td Сыктыквар
+                      td Эльвира Соколова
+                    tr
+                      td Мурманск
+                      td Надя Кузнецова
+    include _footer__second
+    include _footer__after
+  include _modals

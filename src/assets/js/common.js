@@ -2,28 +2,70 @@ $(function() {
     var height = $(window).height(),
         width = $(window).width() / 2;
 
+    getWrapperHeight();
+    $(window).resize(getWrapperHeight);
+
+    if ( $(window).height() < 800 ) $('.wrapper__main, .main__menu').height(800);
+
+    $('.wrapper__winners').height(1250);
+    $('.wrapper__prizes').height(830);
+
+    function getWrapperHeight() {
+        var windowHeight = $(window).height(),
+            headerHeight = $('.header').height(),
+            footerHeight = $('.footer').height();
+
+        if ($(window).height() < height) return false;
+        if ($(window).height() < 800) $('.wrapper__main, .main__menu').height(800);
+
+        $('.wrapper__main, .main__menu').height(windowHeight - headerHeight);
+        $('.wrapper__winners').height(1250);
+        $('.wrapper__prizes').height(830);
+    }
+
+    $('.wrapper__main').css('margin-bottom', 0);
+
     $( "#accordion" ).on('click', 'span', function() {
         $(this)
             .toggleClass('accordion__title-active')
             .next('p').toggleClass('accordion__description-active');
     });
 
-    getWrapperHeight();
-    $(window).resize(getWrapperHeight);
+    $('a[data-scroll]').on('click', function(e) {
+        var target$ = $(this),
+            data = target$.data('scroll');
 
-    $('.menu__list').on('mouseenter mouseleave click', '.menu__item', function(e) {
-        if ( e.type == 'click' ) {
-            $('.menu__circle-active, .menu__circle-active-second').removeClass('menu__circle-active menu__circle-active-second');
-            $(this).children('.menu__circle-default').addClass(function() {
-                if ( $(this).next().hasClass('link__cabinet') ) return 'menu__circle-active menu__circle-active-second';
-                return 'menu__circle-active';
-            });
+        switch (data) {
+            case 'checks':
+                scrollScreen($($('[data-header]')[0]).position().top);
+                break;
+            case 'prizes':
+                scrollScreen($($('[data-header]')[1]).position().top);
+                break;
+            case 'winners':
+                scrollScreen($($('[data-header]')[2]).position().top);
+                break;
+            default:
+                break;
         }
-        else if ( e.type == 'mouseenter' ) {
+
+        return false;
+
+        function scrollScreen(value) {
+            $('html, body').animate({
+                scrollTop: value
+            }, 300);
+        }
+    });
+
+    $('.menu__list').on('mouseenter mouseleave', '.menu__item', function(e) {
+        if ( e.type == 'mouseenter' ) {
             $(this).children('.menu__circle-default').addClass('menu__circle-default-hover');
         } else {
             $(this).children('.menu__circle-default').removeClass('menu__circle-default-hover');
         }
+
+        return false;
     });
 
     $('[data-target]').on('click', function() {
@@ -151,6 +193,23 @@ $(function() {
         }
     });
 
+    var path = document.querySelector('path');
+    var length = path.getTotalLength();
+    // Clear any previous transition
+    path.style.transition = path.style.WebkitTransition =
+        'none';
+    // Set up the starting positions
+    path.style.strokeDasharray = length + ' ' + length;
+    path.style.strokeDashoffset = length;
+    // Trigger a layout so styles are calculated & the browser
+    // picks up the starting position before animating
+    path.getBoundingClientRect();
+    // Define our transition
+    path.style.transition = path.style.WebkitTransition =
+        'stroke-dashoffset 2s ease-in-out';
+    // Go!
+    path.style.strokeDashoffset = '0';
+
     setTimeout(
         function() {
             $('.block__layout-prizes')
@@ -163,17 +222,4 @@ $(function() {
                     }, 500);
                 });
         }, 2000);
-
-    if ( $(window).height() < 800 ) $('.wrapper__main, .main__menu').height(800);
-
-    function getWrapperHeight() {
-        var windowHeight = $(window).height(),
-            headerHeight = $('.header').height(),
-            footerHeight = $('.footer').height();
-
-        if ( $(window).height() < height) return false;
-        if ( $(window).height() < 800 ) $('.wrapper__main, .main__menu').height(800);
-
-        $('.wrapper__main, .main__menu').height(windowHeight - headerHeight);
-    }
 });

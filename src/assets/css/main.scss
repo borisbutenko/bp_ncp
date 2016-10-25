@@ -6,7 +6,7 @@ html {
 }
 
 html, body {
-    min-height: 100%;
+    height: 100%;
 }
 
 .wrapper {
@@ -16,26 +16,24 @@ html, body {
     }
 
     &__main {
-        min-height: 100%;
         padding: 0 30px;
-        margin-bottom: -69px;
         //height: 688px;
         //min-width: 1353px;
-
-        ::after {
-            content: "";
-            display: block;
-        }
     }
 }
 
 .aside__left {
-    float: left;
-    width: 65%;
+    //float: left;
+    display: inline-block !important;
+    width: 64%;
 }
 
 .aside__right {
-    float: left;
+    //float: left;
+    display: inline-block !important;
+    position: absolute !important;
+    top: 10%;
+    width: 34%;
 }
 
 .button__default {
@@ -449,6 +447,25 @@ html, body {
     cursor: pointer;
 }
 
+
+
 @import "_header";
 @import "_index";
 @import "_footer";
+@import "_media";
+
+
+.wrapper__main {
+    min-height: 100%;
+    margin-bottom: -69px;
+}
+
+.wrapper__main::after {
+    content: "";
+    display: block;
+}
+
+footer,
+.wrapper__main::after {
+    height: 69px;
+}

@@ -6,9 +6,11 @@
     padding: 0 30px;
     position: relative;
     z-index: 10;
+    margin-bottom: -67px;
 
     &__second {
         border-top: 1px solid #e3e4e6;
+        margin-bottom: 0;
     }
 
     &__logo {
