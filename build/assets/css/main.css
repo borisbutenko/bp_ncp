@@ -371,6 +371,7 @@ html, body {
     background-image: url(../img/gift.png);
     background-repeat: no-repeat;
     background-position: 15% 25%;
+    font-family: "Myriad Pro";
 }
 
 #modal__check-fifth .modal__check-fifth-content {
@@ -378,6 +379,7 @@ html, body {
     padding-top: 95px;
     padding-left: 356px;
     margin-bottom: 60px;
+    font-family: "Myriad Pro";
 }
 
 #modal__check-fifth .modal__description-check-fifth {
@@ -390,6 +392,7 @@ html, body {
     font-size: 4rem;
     font-weight: 300;
     line-height: 3.5rem;
+    font-family: "Myriad Pro";
 }
 
 #modal__check-fifth .modal__title-fifth-first {
@@ -633,10 +636,10 @@ html, body {
 .main__layout .main__menu .menu__left {
     display: table-cell;
     vertical-align: middle;
+    position: relative;
+    bottom: 102px;
+    left: -5px;
     z-index: 1;
-    position: fixed;
-    top: 400px;
-    left: 20px;
 }
 
 .main__layout .main__menu .menu__left .menu__container .menu__item {
@@ -1042,6 +1045,22 @@ html, body {
 
 .prize__table tbody tr td {
     color: #585858;
+    font-family: "Helvetica Neue Cyr";
+}
+
+.prize__table tbody tr td.win {
+    color: #5e2a8f;
+    font-weight: 400;
+}
+
+.prize__table tbody tr td.wait {
+    color: #d89a52;
+    font-weight: 300;
+}
+
+.prize__table tbody tr td.lose {
+    color: #585858 !important;
+    font-weight: 300;
 }
 
 .prize__table tbody tr td:last-child {
@@ -1191,19 +1210,19 @@ html, body {
     opacity: 0;
 }
 
-.dashed {
-    stroke-dasharray: 10;
+svg {
+    position: relative;
+    top: 12px;
 }
 
 .path {
-    stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: dash 100s linear alternate infinite;
+    animation: dash 2s linear alternate;
 }
 
 @keyframes dash {
     from {
-        stroke-dashoffset: 1000;
+        stroke-dashoffset: 1338;
     }
     to {
         stroke-dashoffset: 0;
@@ -1329,4 +1348,19 @@ html, body {
 .footer__after-link * {
     display: inline-block;
     text-decoration: underline;
+}
+
+.footer__layout {
+    text-align: center;
+    height: auto;
+}
+
+.footer__layout a {
+    width: 16px;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    margin-top: 30px;
+    cursor: pointer;
 }

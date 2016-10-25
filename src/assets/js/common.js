@@ -162,7 +162,7 @@ $(function() {
                         opacity: 1
                     }, 500);
                 });
-        }, 1500);
+        }, 2000);
 
     if ( $(window).height() < 800 ) $('.wrapper__main, .main__menu').height(800);
 

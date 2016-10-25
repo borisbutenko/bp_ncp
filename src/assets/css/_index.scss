@@ -74,13 +74,13 @@
         .menu__left {
             display: table-cell;
             vertical-align: middle;
-            //position: relative;
-            //bottom: 102px;
-            //left: -5px;
+            position: relative;
+            bottom: 102px;
+            left: -5px;
             z-index: 1;
-            position: fixed;
-            top: 400px;
-            left: 20px;
+            //position: fixed;
+            //top: 400px;
+            //left: 20px;
 
             .menu__container {
 
@@ -508,6 +508,22 @@
 
                 td {
                     color: #585858;
+                    font-family: "Helvetica Neue Cyr";
+
+                    &.win {
+                        color: #5e2a8f;
+                        font-weight: 400;
+                    }
+
+                    &.wait {
+                        color: #d89a52;
+                        font-weight: 300;
+                    }
+
+                    &.lose {
+                        color: #585858 !important;
+                        font-weight: 300;
+                    }
                 }
 
                 td:last-child {
@@ -676,19 +692,19 @@
     opacity: 0;
 }
 
-.dashed{
-    stroke-dasharray: 10;
+svg {
+    position: relative;
+    top: 12px;
 }
 
 .path {
-    stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: dash 100s linear alternate infinite;
+    animation: dash 2s linear alternate;
 }
 
 @keyframes dash {
     from {
-        stroke-dashoffset: 1000;
+        stroke-dashoffset: 1338;
     }
     to {
         stroke-dashoffset: 0;

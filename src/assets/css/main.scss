@@ -307,12 +307,14 @@ html, body {
     background-image: url(../img/gift.png);
     background-repeat: no-repeat;
     background-position: 15% 25%;
+    font-family: "Myriad Pro";
     
     .modal__check-fifth-content {
         text-align: left;
         padding-top: 95px;
         padding-left: 356px;
         margin-bottom: 60px;
+        font-family: "Myriad Pro";
     }
 
     .modal__description-check-fifth {
@@ -325,6 +327,7 @@ html, body {
         font-size: 4rem;
         font-weight: 300;
         line-height: 3.5rem;
+        font-family: "Myriad Pro";
 
         &-first {
             font-size: 3rem;
