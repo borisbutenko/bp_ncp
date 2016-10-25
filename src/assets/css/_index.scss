@@ -649,6 +649,7 @@
 .block__layout-saves {
     text-align: left !important;
     margin-top: 40px;
+    opacity: 0;
 
     .saves {
         display: inline-flex;
@@ -666,5 +667,30 @@
             position: relative;
             top: -2px;
         }
+    }
+}
+
+.block__layout-prizes {
+    position: relative;
+    top: 150px;
+    opacity: 0;
+}
+
+.dashed{
+    stroke-dasharray: 10;
+}
+
+.path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 100s linear alternate infinite;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
     }
 }

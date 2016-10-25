@@ -151,6 +151,19 @@ $(function() {
         }
     });
 
+    setTimeout(
+        function() {
+            $('.block__layout-prizes')
+                .animate({
+                    opacity: 1,
+                    top: 0
+                }, 1000, function () {
+                    $('.block__layout-saves').animate({
+                        opacity: 1
+                    }, 500);
+                });
+        }, 1500);
+
     if ( $(window).height() < 800 ) $('.wrapper__main, .main__menu').height(800);
 
     function getWrapperHeight() {
