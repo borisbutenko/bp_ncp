@@ -1,18 +1,30 @@
 $(function() {
 
-    {
-        var menu$ = $('.menu__list'),
-            height = $(document).height();
-    }
-
     var height = $(window).height(),
-        width = $(window).width() / 2;
+        width = $(window).width() / 2,
+        path = document.querySelector('path');
 
     $( "#accordion" ).on('click', 'span', function() {
         $(this)
             .toggleClass('accordion__title-active')
             .next('p').toggleClass('accordion__description-active');
     });
+
+    if ( $(document).scrollTop() >= $('.wrapper').height() ) {
+        animatePrize(true);
+        var menu$ = $('.menu__list'),
+            btn$ = $('.auth__button');
+
+        btn$
+            .addClass('auth__button-second')
+            .children('.auth__text').addClass('auth__text-second');;
+        menu$
+            .find('span').addClass('menu__text-second').end()
+            .find('div')
+            .removeClass('menu__circle-active menu__circle-default-second menu__circle-active-second')
+            .addClass('menu__circle-default-second');
+        $($('[data-scroll=prizes]')[0]).prev('div').addClass('menu__circle-active-second');
+    }
 
     $('a[data-scroll]').on('click', function(e) {
         var target$ = $(this),
@@ -252,7 +264,6 @@ $(function() {
         $('.wrapper__cabinet').height(windowHeight - headerHeight - 67);
     }
 
-    var path = document.querySelector('path');
     function animatePrize(trigger) {
         var value = $($('[data-header]')[1]).position().top;
         if (trigger || document.body.scrollTop > value || document.documentElement.scrollTop > value) {
