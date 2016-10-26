@@ -91,6 +91,7 @@ html, body {
 }
 
 .aside__left {
+    position: relative;
     display: inline-block !important;
     width: 64%;
 }
@@ -98,7 +99,6 @@ html, body {
 .aside__right {
     display: inline-block !important;
     position: absolute !important;
-    top: 10%;
     width: 34%;
 }
 
@@ -632,13 +632,8 @@ html, body {
 }
 
 .main__layout .main__menu .menu__left {
-    display: inline-table;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    margin: auto;
-    padding-bottom: 106px;
+    top: 40%;
 }
 
 .main__layout .main__menu .menu__left .menu__container .menu__list {
@@ -713,13 +708,10 @@ html, body {
 }
 
 .main__layout .main__shares .shares__container-a {
-    left: 0;
-    right: 0;
     display: inline-table;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    top: 50%;
+    margin-top: -50%;
 }
 
 .main__layout .main__shares .shares__container-text {
@@ -1238,6 +1230,7 @@ svg {
     background-color: #43255e;
     padding: 0 30px;
     clear: both;
+    height: 69px;
 }
 
 .footer__second {
@@ -1365,17 +1358,16 @@ svg {
     cursor: pointer;
 }
 
-.wrapper__main {
-    min-height: 100%;
+.wrapper__cabinet {
+    height: 100%;
     margin-bottom: -69px;
 }
 
-.wrapper__main::after {
+.wrapper__cabinet::after {
     content: "";
     display: block;
 }
 
-footer,
-.wrapper__main::after {
+.wrapper__cabinet::after {
     height: 69px;
 }

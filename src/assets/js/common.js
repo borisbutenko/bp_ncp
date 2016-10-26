@@ -2,28 +2,19 @@ $(function() {
     var height = $(window).height(),
         width = $(window).width() / 2;
 
-    getWrapperHeight();
-    $(window).resize(getWrapperHeight);
-
-    if ( $(window).height() < 800 ) $('.wrapper__main, .main__menu').height(800);
-
-    $('.wrapper__winners').height(1250);
-    $('.wrapper__prizes').height(830);
-
     function getWrapperHeight() {
         var windowHeight = $(window).height(),
             headerHeight = $('.header').height(),
             footerHeight = $('.footer').height();
 
         if ($(window).height() < height) return false;
-        if ($(window).height() < 800) $('.wrapper__main, .main__menu').height(800);
+        if ($(window).height() < 650) $('.wrapper__main, .main__menu').height(650);
 
         $('.wrapper__main, .main__menu').height(windowHeight - headerHeight);
         $('.wrapper__winners').height(1250);
         $('.wrapper__prizes').height(830);
+        $('.wrapper__cabinet').height(windowHeight - headerHeight - 67);
     }
-
-    $('.wrapper__main').css('margin-bottom', 0);
 
     $( "#accordion" ).on('click', 'span', function() {
         $(this)
@@ -194,21 +185,23 @@ $(function() {
     });
 
     var path = document.querySelector('path');
-    var length = path.getTotalLength();
-    // Clear any previous transition
-    path.style.transition = path.style.WebkitTransition =
-        'none';
-    // Set up the starting positions
-    path.style.strokeDasharray = length + ' ' + length;
-    path.style.strokeDashoffset = length;
-    // Trigger a layout so styles are calculated & the browser
-    // picks up the starting position before animating
-    path.getBoundingClientRect();
-    // Define our transition
-    path.style.transition = path.style.WebkitTransition =
-        'stroke-dashoffset 2s ease-in-out';
-    // Go!
-    path.style.strokeDashoffset = '0';
+    if ( path ) {
+        var length = path.getTotalLength();
+        // Clear any previous transition
+        path.style.transition = path.style.WebkitTransition =
+            'none';
+        // Set up the starting positions
+        path.style.strokeDasharray = length + ' ' + length;
+        path.style.strokeDashoffset = length;
+        // Trigger a layout so styles are calculated & the browser
+        // picks up the starting position before animating
+        path.getBoundingClientRect();
+        // Define our transition
+        path.style.transition = path.style.WebkitTransition =
+            'stroke-dashoffset 2s ease-in-out';
+        // Go!
+        path.style.strokeDashoffset = '0';
+    }
 
     setTimeout(
         function() {
@@ -222,4 +215,12 @@ $(function() {
                     }, 500);
                 });
         }, 2000);
+
+    $('.wrapper__main').css('margin-bottom', 0);
+    getWrapperHeight();
+    $(window).resize(getWrapperHeight);
+
+    if ($(window).height() < 650) $('.wrapper__main, .main__menu').height(650);
+    $('.wrapper__winners').height(1250);
+    $('.wrapper__prizes').height(830);
 });

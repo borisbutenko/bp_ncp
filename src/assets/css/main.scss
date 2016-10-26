@@ -24,6 +24,7 @@ html, body {
 
 .aside__left {
     //float: left;
+    position: relative;
     display: inline-block !important;
     width: 64%;
 }
@@ -32,7 +33,6 @@ html, body {
     //float: left;
     display: inline-block !important;
     position: absolute !important;
-    top: 10%;
     width: 34%;
 }
 
@@ -455,17 +455,16 @@ html, body {
 @import "_media";
 
 
-.wrapper__main {
-    min-height: 100%;
+.wrapper__cabinet {
+    height: 100%;
     margin-bottom: -69px;
 }
 
-.wrapper__main::after {
+.wrapper__cabinet::after {
     content: "";
     display: block;
 }
 
-footer,
-.wrapper__main::after {
+.wrapper__cabinet::after {
     height: 69px;
 }
