@@ -2,6 +2,17 @@ extends _base
 block base
   .wrapper__second
     include _header__second
+    script.
+      $(function() {
+        $('.logo__o').css({
+          opacity: 1,
+          position: 'relative'
+        });
+        $($('.logo__o')[1]).css({
+          top: -105,
+          left: -10
+        });
+      })
     .wrapper__main.wrapper__cabinet
       div.main__layout(style="margin-bottom: -67px !important;")
         aside.aside__left.main__menu.main__menu-second

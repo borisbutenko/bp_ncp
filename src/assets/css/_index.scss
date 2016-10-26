@@ -85,8 +85,9 @@
             //z-index: 1;
             //margin: auto;
             //padding-bottom: 106px;
-            position: absolute;
+            position: fixed;
             top: 40%;
+            z-index: 1000;
 
             .menu__container {
 
@@ -572,7 +573,8 @@
 
 .share {
 
-    .line__dashed-container{
+    .line__dashed-container {
+        display: none;
         position: absolute;
         left: 27px;
         right: 0;

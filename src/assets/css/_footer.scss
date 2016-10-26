@@ -10,8 +10,8 @@
     }
 
     .social {
-        position: absolute;
-        margin-top: 20px;
+        position: relative;
+        top: 20px;
         z-index: 10;
 
         &__item {
@@ -61,11 +61,11 @@
         background: url(../img/footer__title.png) no-repeat top center;
         height: 20px;
         position: relative;
-        top: 14px;
+        top: -10px;
 
         &-second {
             background: url(../img/footer__title-second.png) no-repeat top center;
-            top: 24px;
+            top: 0;
         }
     }
 }
@@ -122,7 +122,7 @@
 
     a {
         width: 16px;
-        position: absolute;
+        //position: absolute;
         margin: 0 auto;
         left: 0;
         right: 0;
